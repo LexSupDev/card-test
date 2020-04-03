@@ -1,5 +1,4 @@
 var pageUrl=location.search.substring(1);
-console.log(pageUrl);
 
 if (pageUrl === 'ip') {
   var ipFormInput = document.querySelector('#bis-form-ip');
@@ -8,6 +7,3 @@ if (pageUrl === 'ip') {
   var oooFormInput = document.querySelector('#bis-form-ooo');
   oooFormInput.checked = true;
 }
-
-
-
