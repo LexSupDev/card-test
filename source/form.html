@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Карточка</title>
+  </head>
+  <body>
+
+    <header class="page-header">
+      <div class="page-header__wrapper wrapper">
+        <a href="index.html" class="page-header__logo">
+          <img src="img/card-logo.svg" width="169" height="32" alt="Логотип Карточка" class="page-header__logo-image">
+        </a>
+        <div class="page-header__login login">
+          <a href="login.html" class="login__link">Войти в аккаунт</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-form">
+      <div class="page-form__wrapper wrapper">
+        <form action="form.php" method="POST" enctype="multipart/form-data" class="page-form__form app-form">
+          <div class="app-form__block app-form__block--thin">
+            <h2 class="app-form__block-title">Форма бизнеса</h2>
+            <div class="app-form__input-wrapper app-form__input-wrapper--ip-form">
+              <label class="app-form__label app-form__label--ip-form">
+                <input type="radio" name="ip-form" id="bis-form-ip" class="app-form__input">
+                <span class="app-form__span app-form__span-ipform app-form__span-ipform--left">ИП</span>
+              </label>
+              <label class="app-form__label app-form__label--ip-form">
+                <input type="radio" name="ip-form" id="bis-form-ooo" class="app-form__input">
+                <span class="app-form__span app-form__span-ipform app-form__span-ipform--right">ООО/ОАО</span>
+              </label>
+            </div>
+          </div>
+          <div class="app-form__block app-form__block--thin">
+            <h2 class="app-form__block-title">Логотип</h2>
+            <div class="app-form__input-wrapper app-form__input-wrapper--file">
+              <label class="app-form__label">
+                <input type="file" name="logo-input" accept="image/jpeg,image/png,image/svg" class="app-form__input visually-hidden">
+                <span class="app-form__span app-form__span--logo-input">Загрузите логотип (.png / .jpg / .svg)</span>
+              </label>
+            </div>
+          </div>
+          <div class="app-form__block">
+            <h2 class="app-form__block-title app-form__block-title--small">Попробуйте автозаполнение</h2>
+            <p class="app-form__block-desc">Впишите ваш ИНН и БИК вашего банка,<br> а мы попробуем найти эти данные и заполнить за вас </p>
+            <div class="app-form__input-wrapper app-form__input-wrapper--bank-auto">
+              <label class="app-form__label">
+                <input type="number" class="app-form__input" placeholder="ИНН">
+                <span class="app-form__span">ИНН</span>
+                <span class="app-form__span-helper">Загружаем</span>
+              </label>
+              <label class="app-form__label">
+                <input type="number" class="app-form__input" placeholder="БИК">
+                <span class="app-form__span">БИК</span>
+                <span class="app-form__span-helper">15 цифр</span>
+              </label>
+            </div>
+          </div>
+          <div class="app-form__block">
+            <h2 class="app-form__block-title">Общее</h2>
+            <div class="app-form__input-wrapper app-form__input-wrapper--globals">
+              <label class="app-form__label app-form__label--wide">
+                <input type="text" id="fullname" class="app-form__input" placeholder="Полное наименование организации*" required>
+                <span class="app-form__span">Полное наименование организации*</span>
+              </label>
+              <label class="app-form__label app-form__label--wide">
+                <input type="text" class="app-form__input" placeholder="Сокращенное наименование организации*" required>
+                <span class="app-form__span">Сокращенное наименование организации*</span>
+              </label>
+              <label class="app-form__label app-form__label--wide">
+                <input type="text" class="app-form__input" placeholder="Юридический адрес*" required>
+                <span class="app-form__span">Юридический адрес*</span>
+              </label>
+              <label class="app-form__label app-form__label--wide">
+                <input type="text" class="app-form__input" placeholder="Фактический адрес*" required>
+                <span class="app-form__span">Фактический адрес*</span>
+              </label>
+              <label class="app-form__label app-form__label--wide">
+                <input type="text" class="app-form__input" placeholder="Почтовый адрес*" required>
+                <span class="app-form__span">Почтовый адрес*</span>
+              </label>
+              <label class="app-form__label">
+                <input type="number" class="app-form__input" placeholder="ИНН*" required>
+                <span class="app-form__span">ИНН*</span>
+                <span class="app-form__span-helper">12 цифр</span>
+              </label>
+              <label class="app-form__label">
+                <input type="number" class="app-form__input" placeholder="ОГРНИП*" required>
+                <span class="app-form__span">ОГРНИП*</span>
+                <span class="app-form__span-helper">15 цифр</span>
+              </label>
+              <label class="app-form__label">
+                <input type="number" class="app-form__input" placeholder="ОКПО">
+                <span class="app-form__span">ОКПО</span>
+                <span class="app-form__span-helper">10 цифр</span>
+              </label>
+              <label class="app-form__label">
+                <input type="number" class="app-form__input" placeholder="ОКАТО">
+                <span class="app-form__span">ОКАТО</span>
+                <span class="app-form__span-helper">8-11 цифр</span>
+              </label>
+              <label class="app-form__label">
+                <input type="number" class="app-form__input" placeholder="ОКТМО">
+                <span class="app-form__span">ОКТМО</span>
+                <span class="app-form__span-helper">11 цифр</span>
+              </label>
+              <label class="app-form__label app-form__label--wide">
+                <input type="text" class="app-form__input" placeholder="Руководитель*" required>
+                <span class="app-form__span">Руководитель*</span>
+              </label>
+              <label class="app-form__label">
+                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="app-form__input" placeholder="Телефон*" required>
+                <span class="app-form__span">Телефон*</span>
+              </label>
+              <label class="app-form__label">
+                <input type="text" class="app-form__input" placeholder="Сайт">
+                <span class="app-form__span">Сайт</span>
+              </label>
+              <label class="app-form__label app-form__label--wide">
+                <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" class="app-form__input" placeholder="Электронная почта*" required>
+                <span class="app-form__span">Электронная почта*</span>
+              </label>
+            </div>
+          </div>
+          <div class="app-form__block">
+            <h2 class="app-form__block-title">Банковские реквизиты</h2>
+            <div class="app-form__input-wrapper app-form__input-wrapper--bank">
+              <label class="app-form__label app-form__label--wide">
+                <input type="text" class="app-form__input" placeholder="Наименование банка*" required>
+                <span class="app-form__span">Наименование банка*</span>
+              </label>
+              <label class="app-form__label app-form__label--wide">
+                <input type="text" class="app-form__input" placeholder="Корреспондентский счет*" required>
+                <span class="app-form__span">Корреспондентский счет*</span>
+              </label>
+              <label class="app-form__label">
+                <input type="number" class="app-form__input" placeholder="БИК*" required>
+                <span class="app-form__span">БИК*</span>
+              </label>
+              <label class="app-form__label">
+                <input type="number" class="app-form__input" placeholder="Расчетный счет*" required>
+                <span class="app-form__span">Расчетный счет*</span>
+              </label>
+              <label class="app-form__label">
+                <input type="number" class="app-form__input" placeholder="ИНН*" required>
+                <span class="app-form__span">ИНН*</span>
+              </label>
+              <label class="app-form__label">
+                <input type="number" class="app-form__input" placeholder="КПП*" required>
+                <span class="app-form__span">КПП*</span>
+              </label>
+            </div>
+          </div>
+          <div class="app-form__block">
+            <h2 class="app-form__block-title">Вид карточки</h2>
+            <div class="app-form__input-wrapper app-form__input-wrapper--card-view">
+              <label class="app-form__label app-form__label--card">
+                <input type="radio" name="card-view" class="app-form__input">
+                <span class="app-form__span app-form__span-card-view app-form__span-card-view--1"></span>
+              </label>
+              <label class="app-form__label app-form__label--card">
+                <input type="radio" name="card-view" class="app-form__input">
+                <span class="app-form__span app-form__span-card-view app-form__span-card-view--2"></span>
+              </label>
+              <label class="app-form__label app-form__label--card">
+                <input type="radio" name="card-view" class="app-form__input">
+                <span class="app-form__span app-form__span-card-view app-form__span-card-view--3"></span>
+              </label>
+            </div>
+          </div>
+          <div class="app-form__block">
+            <h2 class="app-form__block-title">Цветовая схема</h2>
+            <div class="app-form__input-wrapper app-form__input-wrapper--colors">
+              <label class="app-form__label">
+                <input type="radio" name="color" value="" class="app-form__input">
+                <span class="app-form__span app-form__span--1"></span>
+              </label>
+              <label class="app-form__label">
+                <input type="radio" name="color" value="" class="app-form__input">
+                <span class="app-form__span app-form__span--2"></span>
+              </label>
+              <label class="app-form__label">
+                <input type="radio" name="color" value="" class="app-form__input">
+                <span class="app-form__span app-form__span--3"></span>
+              </label>
+              <label class="app-form__label">
+                <input type="radio" name="color" value="" class="app-form__input">
+                <span class="app-form__span app-form__span--4"></span>
+              </label>
+              <label class="app-form__label">
+                <input type="radio" name="color" value="" class="app-form__input">
+                <span class="app-form__span app-form__span--5"></span>
+              </label>
+              <label class="app-form__label">
+                <input type="radio" name="color" value="" class="app-form__input">
+                <span class="app-form__span app-form__span--6"></span>
+              </label>
+              <label class="app-form__label">
+                <input type="radio" name="color" value="" class="app-form__input">
+                <span class="app-form__span app-form__span--7"></span>
+              </label>
+              <label class="app-form__label">
+                <input type="radio" name="color" value="" class="app-form__input">
+                <span class="app-form__span app-form__span--8"></span>
+              </label>
+              <label class="app-form__label">
+                <input type="radio" name="color" value="" class="app-form__input">
+                <span class="app-form__span app-form__span--9"></span>
+              </label>
+              <label class="app-form__label">
+                <input type="radio" name="color" value="" class="app-form__input">
+                <span class="app-form__span app-form__span--10"></span>
+              </label>
+              <label class="app-form__label">
+                <input type="radio" name="color" value="" class="app-form__input">
+                <span class="app-form__span app-form__span--11"></span>
+              </label>
+              <label class="app-form__label">
+                <input type="radio" name="color" value="" class="app-form__input">
+                <span class="app-form__span app-form__span--12"></span>
+              </label>
+              <label class="app-form__label">
+                <input type="radio" name="color" value="" class="app-form__input">
+                <span class="app-form__span app-form__span--13"></span>
+              </label>
+              <label class="app-form__label">
+                <input type="radio" name="color" value="" class="app-form__input">
+                <span class="app-form__span app-form__span--14"></span>
+              </label>
+              <label class="app-form__label">
+                <input type="radio" name="color" value="" class="app-form__input">
+                <span class="app-form__span app-form__span--15"></span>
+              </label>
+              <label class="app-form__label">
+                <input type="radio" name="color" value="" class="app-form__input">
+                <span class="app-form__span app-form__span--16"></span>
+              </label>
+              <label class="app-form__label">
+                <input type="radio" name="color" value="" class="app-form__input">
+                <span class="app-form__span app-form__span--17"></span>
+              </label>
+            </div>
+          </div>
+          <div class="app-form__block app-form__block">
+            <div class="app-form__input-wrapper app-form__input-wrapper--buttons">
+              <button class="app-form__button button button--second" type="button">Посмотреть наш пример</button>
+              <button class="app-form__button button button--submit" type="submit">Создать карточку!</button>
+            </div>
+          </div>
+        </form>
+        <div class="page-form__validation validation-check">
+          <div class="validation-check__block">
+            <h3 class="validation-check__block-title">Форма бизнеса</h3>
+          </div>
+          <div class="validation-check__block">
+            <h3 class="validation-check__block-title">Логотип</h3>
+            <ul class="validation-check__block-list check-list">
+              <li class="check-list__item">
+                <p class="check-list__item-title">Наличие логотипа</p>
+              </li>
+            </ul>
+          </div>
+          <div class="validation-check__block">
+            <h3 class="validation-check__block-title">Общее</h3>
+            <ul class="validation-check__block-list check-list">
+              <li class="check-list__item">
+                <p class="check-list__item-title check-list__item-title--valid">Полное наименование организации</p>
+              </li>
+              <li class="check-list__item">
+                <p class="check-list__item-title check-list__item-title--valid">Сокращенное наименование организации</p>
+              </li>
+              <li class="check-list__item">
+                <p class="check-list__item-title">Юридический адрес</p>
+              </li>
+              <li class="check-list__item">
+                <p class="check-list__item-title">Фактический адрес</p>
+              </li>
+              <li class="check-list__item">
+                <p class="check-list__item-title">Почтовый адрес</p>
+              </li>
+              <li class="check-list__item">
+                <p class="check-list__item-title">ИНН</p>
+              </li>
+              <li class="check-list__item">
+                <p class="check-list__item-title">ОГРНИП</p>
+              </li>
+              <li class="check-list__item">
+                <p class="check-list__item-title">ОКПО</p>
+              </li>
+              <li class="check-list__item">
+                <p class="check-list__item-title">ОКАТО</p>
+              </li>
+              <li class="check-list__item">
+                <p class="check-list__item-title">ОКТМО</p>
+              </li>
+              <li class="check-list__item">
+                <p class="check-list__item-title check-list__item-title--valid">Руководитель</p>
+              </li>
+              <li class="check-list__item">
+                <p class="check-list__item-title check-list__item-title--invalid">Телефон</p>
+              </li>
+              <li class="check-list__item">
+                <p class="check-list__item-title check-list__item-title--valid">Сайт</p>
+              </li>
+              <li class="check-list__item">
+                <p class="check-list__item-title check-list__item-title--warning">Email</p>
+              </li>
+            </ul>
+          </div>
+          <div class="valdation-check__block">
+            <h3 class="validation-check__block-title">Банковские реквизиты</h3>
+            <ul class="validation-check__block-list check-list">
+              <li class="check-list__item">
+                <p class="check-list__item-title">Наименование банка</p>
+              </li>
+              <li class="check-list__item">
+                <p class="check-list__item-title">Корреспондентский счет</p>
+              </li>
+              <li class="check-list__item">
+                <p class="check-list__item-title">Расчетный счет</p>
+              </li>
+              <li class="check-list__item">
+                <p class="check-list__item-title">БИК</p>
+              </li>
+              <li class="check-list__item">
+                <p class="check-list__item-title">ИНН</p>
+              </li>
+              <li class="check-list__item">
+                <p class="check-list__item-title">КПП</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper wrapper">
+        <p class="page-footer__txt">Карточка - инструмент создания карточек предприятия</p>
+        <div class="copyright">
+          <div class="copyright__wrapper">
+            <span class="copyright__txt">Инструмент</span>
+            <img src="img/goldcarrot-logo.svg" width="13" height="22" alt="" class="copyright__image">
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

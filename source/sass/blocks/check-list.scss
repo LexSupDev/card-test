@@ -1,0 +1,40 @@
+.check-list__item-title {
+  font-family: $ff-medium;
+  font-size: 13px;
+  padding-bottom: 8px;
+  color: #999999;
+  position: relative;
+
+  &:before {
+    @include pseudo;
+    width: 13px;
+    height: 13px;
+    left: 0;
+  }
+
+  &--valid {
+    color: $color-main;
+    padding-left: 17px;
+    &:before {
+      background: url(../img/valid.svg) no-repeat;
+    }
+  }
+
+  &--warning {
+    color: $color-main;
+    padding-left: 17px;
+    &:before {
+      background: url(../img/warning.svg) no-repeat;
+    }
+  }
+
+  &--invalid {
+    padding-left: 17px;
+
+    &:before {
+      width: 11px;
+      height: 11px;
+      background: url(../img/invalid.svg) no-repeat;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.page-footer {
+  padding: 22px 0;
+  color: #aaa
+}
+
+.page-footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.page-footer__txt {
+  font-family: $ff-medium;
+  font-size: 16px;
+}

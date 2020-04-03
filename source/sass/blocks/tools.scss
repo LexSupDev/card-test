@@ -1,0 +1,21 @@
+.tools {
+  padding-bottom: 70px;
+  background-color: $color-bg;
+}
+
+.tools__row {
+  display: flex;
+  align-items: center;
+}
+
+.tools__title {
+  margin: 0;
+  font-family: $ff-bold;
+  font-size: 28px;
+  line-height: 38px;
+  margin-bottom: 30px;
+}
+
+.tools__list {
+  display: flex;
+}

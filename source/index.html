@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Карточка</title>
+  </head>
+  <body>
+
+    <header class="page-header">
+      <div class="page-header__wrapper wrapper">
+        <a href="index.html" class="page-header__logo">
+          <img src="img/card-logo.svg" width="169" height="32" alt="Логотип Карточка" class="page-header__logo-image">
+        </a>
+        <div class="page-header__login login">
+          <a href="login.html" class="login__link">Войти в аккаунт</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <div class="promo">
+        <div class="promo__wrapper wrapper">
+          <h1 class="promo__title visually-hidden">Карточка - это удобный сервис для формирования карточек предприятий вашего бизнеса.</h1>
+          <p class="promo__desc">Карточка - это удобный сервис для формирования карточек предприятий вашего бизнеса. <a href="" class="promo__desc-link">Посмотрите</a>, какая карточка вышла у нас!</p>
+          <div class="promo__app app">
+            <h2 class="app__title">Чтобы начать, выберите форму бизнеса</h2>
+            <div class="app__button-wrapper">
+              <a href="form.html?ip" class="app__button button">ИП</a>
+              <a href="form.html?ooo" class="app__button button">ООО/ОАО</a>
+            </div>
+            <p class="app__note">Как только вы выберете  форму бизнеса,<br> мы перенесем вас на страницу заполнения карточки</p>
+          </div>
+          <div class="promo__note">
+            <p class="promo__problem">Передумали делать карточку?</p>
+            <p class="promo__advice">Советуем посмотреть больше инструментов для бизнеса.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tools">
+        <div class="tools__wrapper wrapper">
+          <h2 class="tools__title">Попробуйте другие инструменты для бизнеса</h2>
+          <div class="tools__row">
+            <ul class="tools__list">
+              <li class="tools__list-item tool-item tool-item--weeek">
+                <img src="img/weeek-icon.svg" width="64" height="66" alt="Иконка приложения Weeek" class="tool-item__icon tool-item__icon--rotate">
+                <h3 class="tool-item__title tool-item__title--small">Тайм-менеджмент вместе с <b class="tool-item__title--bold">Weeek</b></h3>
+                <p class="tool-item__desc">Им можно пользоваться и на работе, и в личной жизни.<br>В общем, это удобно!</p>
+              </li>
+              <li class="tools__list-item tool-item tool-item--smaple">
+                <img src="img/smaple-icon.svg" width="66" height="66" alt="Иконка приложения Smaple" class="tool-item__icon">
+                <h3 class="tool-item__title">Соберите свои контакты в одном месте - в <b class="tool-item__title--bold">Smaple</b></h3>
+                <p class="tool-item__desc tool-item__desc--small">Smaple - это возможность воедино собрать все контактные данные для связи с вами.</p>
+              </li>
+            </ul>
+            <div class="tools__subscribe subscribe">
+              <p class="subscribe__desc">Попробуйте <a class="subscribe__link">подписаться</a>,<br> так вы узнаете о новых инструментах</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="extras">
+        <div class="extras__wrapper wrapper">
+          <h2 class="extras__title">Вашему бизнесу нужен витамин роста</h2>
+          <ul class="extras__list">
+            <li class="extras__list-item extra-item">
+              <div class="extra-item__wrapper">
+                <img src="img/extra__item_1.jpg" width="400" height="260" alt="Иллюстрация Дизайн и брендинг" class="extra-item__image">
+                <h4 class="extra-item__title">Дизайн и брендинг</h4>
+              </div>
+            </li>
+            <li class="extras__list-item extra-item">
+              <div class="extra-item__wrapper">
+                <img src="img/extra__item_2.jpg" width="400" height="260" alt="Иллюстрация Разработка веб-сервисов" class="extra-item__image">
+                <h4 class="extra-item__title">Разработка веб-сервисов</h4>
+              </div>
+            </li>
+            <li class="extras__list-item extra-item">
+              <div class="extra-item__wrapper">
+                <img src="img/extra__item_3.jpg" width="400" height="260" alt="Иллюстрация Реклама и продвижение" class="extra-item__image">
+                <h4 class="extra-item__title">Реклама и продвижение</h4>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lk-promo">
+        <div class="lk-promo__wrapper wrapper">
+          <h2 class="lk-promo__title visually-hidden">Картотека - Личный кабинет</h2>
+          <p class="lk-promo__desc">Личный кабинет - это удобно!<br> Вы можете сохранять сразу несколько документов и делиться ими одной ссылкой.</p>
+          <button class="lk-promo__button button">Войти</button>
+        </div>
+      </div>
+
+      <div class="subscribe__popup popup visually-hidden">
+        <div class="popup__wrapper">
+          <h4 class="popup__title">Подписка на обновления</h4>
+          <p class="popup__desc">Подпишитесь на нас. Так вы будете в курсе всего, что касается бизнес-инструментов</p>
+          <form action="popup.php" method="GET" class="popup__form">
+            <label class="popup__form-label">
+              <input type="email" class="popup__form-input" placeholder="Почта">
+            </label>
+            <button type="submit" class="popup__form-button button">Подписаться</button>
+          </form>
+          <div class="popup__close"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper wrapper">
+        <p class="page-footer__txt">Карточка - инструмент создания карточек предприятия</p>
+        <div class="copyright">
+          <div class="copyright__wrapper">
+            <span class="copyright__txt">Инструмент</span>
+            <img src="img/goldcarrot-logo.svg" width="13" height="22" alt="Логотип Gold Carrot" class="copyright__image">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

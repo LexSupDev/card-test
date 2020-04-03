@@ -1,0 +1,15 @@
+.login__link {
+  color: $color-main;
+  font-family: $ff-medium;
+  font-size: 14px;
+  position: relative;
+
+  &:before {
+    @include pseudo;
+    background-image: url(../img/login.svg);
+    width: 22px;
+    height: 34px;
+    left: -37px;
+    top: -5px;
+  }
+}

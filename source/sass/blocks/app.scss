@@ -1,0 +1,32 @@
+.app {
+  padding-top: 266px;
+}
+
+.app__title {
+  font-family: $ff-bold;
+  font-size: 24px;
+  margin: 0;
+}
+
+.app__button-wrapper {
+  padding-top: 31px;
+  padding-bottom: 21px;
+  display: flex;
+  justify-content: center;
+}
+
+.app__button {
+  margin-right: 20px;
+  background-color: $color-second;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.app__note {
+  margin: 0 auto;
+  font-size: $min-font-size;
+  width: 340px;
+  line-height: 18px;
+}

@@ -1,0 +1,56 @@
+.tool-item {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  box-shadow: 3px 3px 11px $color-border;
+  border-radius: 20px;
+  margin-right: 20px;
+  padding-top: 25px;
+  padding-left: 25px;
+  background: center 35% no-repeat;
+  &--weeek {
+    background-image: url(../img/weeek-back.jpg);
+  }
+
+  &--smaple {
+    background-image: url(../img/smaple-back.jpg);
+  }
+}
+
+.tool-item__icon {
+  margin-right: 25px;
+  border: 1px solid $color-border;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  &--rotate {
+    transform: rotate(-5deg);
+  }
+}
+
+.tool-item__title {
+  font-family: $ff-light;
+  font-size: 16px;
+  font-weight: 300;
+  width: 250px;
+  margin: 0;
+
+  &--small {
+    width: 150px;
+  }
+
+  &--bold {
+    font-family: $ff-semibold;
+  }
+}
+
+.tool-item__desc {
+  width: 325px;
+  margin-top: 30px;
+  padding-bottom: 65px;
+
+  &--small {
+    width: 315px;
+  }
+}

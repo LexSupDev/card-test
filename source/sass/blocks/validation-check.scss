@@ -1,0 +1,21 @@
+.validation-check {
+  width: 360px;
+  margin-top: 375px ;
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  padding-top: 24px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.validation-check__block {
+  padding-bottom: 16px;
+}
+
+.validation-check__block-title {
+  margin: 0;
+  padding-bottom: 6px;
+  font-family: $ff-semibold;
+  font-weight: normal;
+}
+

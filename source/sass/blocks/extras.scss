@@ -1,0 +1,28 @@
+.extras {
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  background-color: $color-bg;
+}
+
+.extras__title {
+  margin: 0;
+  font-family: $ff-bold;
+  font-size: 28px;
+  line-height: 38px;
+  position: relative;
+  margin-bottom: 24px;
+
+  &:after {
+    @include pseudo;
+    width: 25px;
+    height: 17px;
+    background-image: url(../img/extras__title.png);
+    top: -6px;
+    left: 540px;
+  }
+}
+
+.extras__list {
+  display: flex;
+  justify-content: space-between;
+}

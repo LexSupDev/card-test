@@ -1,0 +1,48 @@
+.promo {
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 40px;
+  background: url(../img/promo-back.jpg) center bottom no-repeat;
+  background-size: auto;
+}
+
+.promo__wrapper {
+  padding-bottom: 20px;
+}
+
+.promo__desc {
+  width: 481px;
+  text-align: left;
+  font-family: $ff-regular;
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+.promo__desc-link {
+  color: $color-second;
+  text-decoration: underline;
+}
+
+.promo__note {
+  padding-top: 300px;
+  font-size: $min-font-size;
+}
+
+.promo__problem {
+  padding-bottom: 5px;
+}
+
+.promo__advice {
+  font-family: $ff-semibold;
+  padding-bottom: 15px;
+  position: relative;
+
+  &:after {
+    @include pseudo;
+    width: 12px;
+    height: 3px;
+    background-image: url(../img/promo-dots.svg);
+    left: 50%;
+    bottom: 5px;
+  }
+}

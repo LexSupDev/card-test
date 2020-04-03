@@ -1,0 +1,25 @@
+.subscribe {
+  text-align: center;
+  width: 225px;
+  margin: 0 auto;
+}
+
+.subscribe__desc {
+  margin-top: 76px;
+  font-size: 12px;
+  position: relative;
+
+  :before {
+    @include pseudo;
+    background-image: url(../img/cards.svg);
+    width: 161px;
+    height: 85px;
+    top: -95px;
+    left: 25px;
+  }
+}
+
+.subscribe__link {
+  color: $color-second;
+  text-decoration: underline;
+}

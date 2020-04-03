@@ -1,0 +1,553 @@
+.app-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 40px;
+  width: 840px;
+  margin-top: 25px;
+}
+
+.app-form__block {
+  width: 100%;
+
+  &--thin {
+    width: 50%;
+  }
+}
+
+.app-form__block-title {
+  margin: 0;
+  font-family: $ff-semibold;
+  font-weight: normal;
+  font-size: 28px;
+  padding-bottom: 20px;
+
+  &--small {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+}
+
+.app-form__block-desc {
+  width: 350px;
+  font-family: $ff-regular;
+  font-size: 13px;
+  padding-bottom: 20px;
+}
+
+.app-form__input-wrapper {
+  &--ip-form {
+    display: flex;
+    justify-content: start;
+  }
+
+  &--bank-auto {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  &--globals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  &--bank {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  &--colors {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &--card-view {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 15px;
+  }
+
+  &--buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.app-form__input-wrapper--file > .app-form__label{
+  margin: 0;
+}
+
+.app-form__label {
+  display: block;
+  position: relative;
+  margin-bottom: 25px;
+  width: 49%;
+
+  &--wide {
+    width: 100%;
+  }
+
+  &--card {
+    width: 150px;
+    margin-right: 20px;
+  }
+
+  &--ip-form {
+    width: 205px;
+    margin-bottom: 100px;
+  }
+
+}
+
+.app-form__input[name=ip-form] {
+  position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.app-form__input[name=ip-form] + .app-form__span-ipform {
+  width: 205px;
+  padding: 20px;
+  border: 1px solid $color-border;
+  margin-left: -22px;
+  text-align: center;
+  font-family: $ff-medium;
+  font-size: 16px;
+  color: $color-main;
+
+  &--left {
+    border-radius: 8px 0px 0px 8px;
+  }
+
+  &--right {
+    border-radius: 0px 8px 8px 0px;
+  }
+}
+
+.app-form__input[name=ip-form]:checked + .app-form__span-ipform {
+  background-color: #F5E07E;
+}
+
+.app-form__input[name=logo-input] + .app-form__span {
+  border: 1px dashed $color-border;
+  width: 410px;
+  text-align: center;
+  cursor: pointer;
+  font-family: $ff-regular;
+  font-size: 14px;
+  color: #B2B2B2;
+  padding: 20px;
+  margin-left: -20px;
+  border-radius: 8px;
+}
+
+.app-form__input[name=card-view] {
+  position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.app-form__input[name=card-view] + .app-form__span {
+  position: relative;
+  display: block;
+  width: 152px;
+  height: 214px;
+  margin-left: -30px;
+}
+
+.app-form__span-card-view {
+  &:focus,
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &--1 {
+    background: url(../img/card-view1.png) no-repeat;
+  }
+
+  &--2 {
+    background: url(../img/card-view2.png) no-repeat;
+  }
+
+  &--3 {
+    background: url(../img/card-view3.png) no-repeat;
+  }
+}
+
+.app-form__input[name=card-view]:checked + .app-form__span-card-view {
+  &--1 {
+    background: url(../img/card-view1--active.png) no-repeat;
+  }
+
+  &--2 {
+    background: url(../img/card-view2--active.png) no-repeat;
+  }
+
+  &--3 {
+    background: url(../img/card-view3--active.png) no-repeat;
+  }
+}
+
+.app-form__input[name=color] {
+  position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.app-form__input[name=color] + .app-form__span {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid $color-border;
+  box-sizing: border-box;
+  //box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  cursor: pointer;
+  transition: none;
+  margin-left: -20px;
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:after {
+    @include pseudo;
+    width: 24px;
+    height: 24px;
+    left: 8px;
+    top: 8px;
+    border-radius: 4px;
+  }
+
+  &:hover:after {
+    left: 7px;
+    top: 7px;
+  }
+}
+
+.app-form__input[name=color] + .app-form__span {
+  &--1 {
+    &:after {
+      background-color: #EB4545;
+    }
+    &:focus, &:hover {
+      border: 2px solid #EB4545;
+      box-shadow: 0px 2px 16px rgba(232, 117, 40, 0.33);
+    }
+  }
+
+  &--2 {
+    &:after {
+      background-color: #E87528;
+    }
+    &:focus, &:hover {
+      border: 2px solid #E87528;
+      box-shadow: 0px 2px 16px rgba(232, 117, 40, 0.33);
+    }
+  }
+
+  &--3 {
+    &:after {
+      background-color: #FECB00;
+    }
+    &:focus, &:hover {
+      border: 2px solid #FECB00;
+      box-shadow: 0px 2px 16px rgba(232, 117, 40, 0.33);
+    }
+  }
+
+  &--4 {
+    &:after {
+      background-color: #BDE716;
+    }
+    &:focus, &:hover {
+      border: 2px solid #BDE716;
+      box-shadow: 0px 2px 16px rgba(232, 117, 40, 0.33);
+    }
+  }
+
+  &--5 {
+    &:after {
+      background-color: #74DA30;
+    }
+    &:focus, &:hover {
+      border: 2px solid #74DA30;
+      box-shadow: 0px 2px 16px rgba(232, 117, 40, 0.33);
+    }
+  }
+
+  &--6 {
+    &:after {
+      background-color: #19E619;
+    }
+    &:focus, &:hover {
+      border: 2px solid #19E619;
+      box-shadow: 0px 2px 16px rgba(232, 117, 40, 0.33);
+    }
+  }
+
+  &--7 {
+    &:after {
+      background-color: #5FE092;
+    }
+    &:focus, &:hover {
+      border: 2px solid #5FE092;
+      box-shadow: 0px 2px 16px rgba(232, 117, 40, 0.33);
+    }
+  }
+
+  &--8 {
+    &:after {
+      background-color: #2DD8B6;
+    }
+    &:focus, &:hover {
+      border: 2px solid #2DD8B6;
+      box-shadow: 0px 2px 16px rgba(232, 117, 40, 0.33);
+    }
+  }
+
+  &--9 {
+    &:after {
+      background-color: #60CCE7;
+    }
+    &:focus, &:hover {
+      border: 2px solid #60CCE7;
+      box-shadow: 0px 2px 16px rgba(232, 117, 40, 0.33);
+    }
+  }
+
+  &--10 {
+    &:after {
+      background-color: #4F8FF0;
+    }
+    &:focus, &:hover {
+      border: 2px solid #4F8FF0;
+      box-shadow: 0px 2px 16px rgba(232, 117, 40, 0.33);
+    }
+  }
+
+  &--11 {
+    &:after {
+      background-color: #4646E5;
+    }
+    &:focus, &:hover {
+      border: 2px solid #4646E5;
+      box-shadow: 0px 2px 16px rgba(232, 117, 40, 0.33);
+    }
+  }
+
+  &--12 {
+    &:after {
+      background-color: #8B50E4;
+    }
+    &:focus, &:hover {
+      border: 2px solid #8B50E4;
+      box-shadow: 0px 2px 16px rgba(232, 117, 40, 0.33);
+    }
+  }
+
+  &--13 {
+    &:after {
+      background-color: #F347D1;
+    }
+    &:focus, &:hover {
+      border: 2px solid #F347D1;
+      box-shadow: 0px 2px 16px rgba(232, 117, 40, 0.33);
+    }
+  }
+
+  &--14 {
+    &:after {
+      background-color: #F347D1;
+    }
+    &:focus, &:hover {
+      border: 2px solid #F347D1;
+      box-shadow: 0px 2px 16px rgba(232, 117, 40, 0.33);
+    }
+  }
+
+  &--15 {
+    &:after {
+      background-color: #EB3E83;
+    }
+    &:focus, &:hover {
+      border: 2px solid #EB3E83;
+      box-shadow: 0px 2px 16px rgba(232, 117, 40, 0.33);
+    }
+  }
+
+  &--16 {
+    &:after {
+      background-color: #000000;
+    }
+    &:focus, &:hover {
+      border: 2px solid #000000;
+      box-shadow: 0px 2px 16px rgba(232, 117, 40, 0.33);
+    }
+  }
+
+  &--17 {
+    &:after {
+      background-color: #CCCCCC;
+    }
+    &:focus, &:hover {
+      border: 2px solid #CCCCCC;
+      box-shadow: 0px 2px 16px rgba(232, 117, 40, 0.33);
+    }
+  }
+}
+
+.app-form__input[name=color]:checked + .app-form__span {
+  &:after {
+    left: 7px;
+    top: 7px;
+  }
+
+  &--1 {
+    border: 2px solid #EB4545;
+  }
+
+  &--2 {
+    border: 2px solid #E87528;
+  }
+
+  &--3 {
+    border: 2px solid #FECB00;
+  }
+
+  &--4 {
+    border: 2px solid #BDE716;
+  }
+
+  &--5 {
+    border: 2px solid #74DA30;
+  }
+
+  &--6 {
+    border: 2px solid #19E619;
+  }
+
+  &--7 {
+    border: 2px solid #5FE092;
+  }
+
+  &--8 {
+    border: 2px solid #2DD8B6;
+  }
+
+  &--9 {
+    border: 2px solid #60CCE7;
+  }
+
+  &--10 {
+    border: 2px solid #4F8FF0;
+  }
+
+  &--11 {
+    border: 2px solid #4646E5;
+  }
+
+  &--12 {
+    border: 2px solid #8B50E4;
+  }
+
+  &--13 {
+    border: 2px solid #F347D1;
+  }
+
+  &--14 {
+    border: 2px solid #F347D1;
+  }
+
+  &--15 {
+    border: 2px solid #EB3E83;
+  }
+
+  &--16 {
+    border: 2px solid #000000;
+  }
+
+  &--17 {
+    border: 2px solid #CCCCCC;
+  }
+}
+
+.app-form__input {
+  width: 100%;
+  position: relative;
+  font-family: $ff-regular;
+  font-size: 16px;
+  padding: 20px;
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+
+  &:invalid {
+    border-color: #EFA7A7;
+  }
+
+  &:required:invalid {
+    border: 1px solid $color-border;
+  }
+
+  &:not(:placeholder-shown) {
+    border-color: #bbbbbb;
+  }
+}
+
+.app-form__span {
+  font-family: $ff-regular;
+  font-size: 10px;
+  position: absolute;
+  top: 8px;
+  left: 21px;
+  opacity: 1;
+  transition: all 0.2s ease-out;
+  color: #888888;
+}
+
+.app-form__input:placeholder-shown + .app-form__span {
+  opacity: 0;
+  top: 15px;
+}
+
+.app-form__span-helper {
+  font-family: $ff-semibold;
+  font-size: 14px;
+  color: #b2b2b2;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.app-form__button {
+  width: 50%;
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
