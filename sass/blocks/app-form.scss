@@ -107,7 +107,7 @@
 .app-form__input[name=ip-form] {
   position: absolute;
 	z-index: -1;
-	opacity: 0;
+  opacity: 0;
 }
 
 .app-form__input[name=ip-form] + .app-form__span-ipform {
@@ -120,6 +120,12 @@
   font-size: 16px;
   color: $color-main;
 
+  &:hover,
+  &:focus {
+    background-color: #FFF2B6;
+    color: #68634F;
+  }
+
   &--left {
     border-radius: 8px 0px 0px 8px;
   }
@@ -131,6 +137,12 @@
 
 .app-form__input[name=ip-form]:checked + .app-form__span-ipform {
   background-color: #F5E07E;
+
+  &:hover,
+  &:focus {
+    background-color: #FFF2B6;
+    color: #68634F;
+  }
 }
 
 .app-form__input[name=logo-input] + .app-form__span {
