@@ -1358,6 +1358,8 @@ input[type="number"]::-webkit-inner-spin-button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
+  .app-form__block--thin {
+    width: 100%; }
   .app-form__label {
     width: 100%; }
     .app-form__label--ip-form {
@@ -1407,7 +1409,7 @@ input[type="number"]::-webkit-inner-spin-button {
           -ms-flex-pack: justify;
               justify-content: space-between; }
   .app-form__input[name=ip-form] + .app-form__span-ipform {
-    width: 150px; }
+    width: 100%; }
   .app-form__input[name=logo-input] + .app-form__span {
     width: 100%; }
   .app-form__button {

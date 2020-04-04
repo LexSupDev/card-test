@@ -575,6 +575,12 @@ input[type="number"]::-webkit-inner-spin-button {
     flex-direction: column;
   }
 
+  .app-form__block {
+    &--thin {
+      width: 100%;
+    }
+  }
+
   .app-form__label {
     width: 100%;
 
@@ -625,8 +631,8 @@ input[type="number"]::-webkit-inner-spin-button {
     }
   }
 
-    .app-form__input[name=ip-form] + .app-form__span-ipform {
-    width: 150px;
+  .app-form__input[name=ip-form] + .app-form__span-ipform {
+    width: 100%;
   }
 
   .app-form__input[name=logo-input] + .app-form__span {
