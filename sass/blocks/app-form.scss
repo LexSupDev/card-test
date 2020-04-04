@@ -146,7 +146,7 @@
 }
 
 .app-form__input[name=logo-input] + .app-form__span {
-  border: 1px dashed $color-border;
+  border: 2px dashed $color-border;
   width: 410px;
   text-align: center;
   cursor: pointer;
@@ -156,6 +156,11 @@
   padding: 20px;
   margin-left: -20px;
   border-radius: 8px;
+
+  &:hover,
+  &:focus {
+    border-color: #B7B7B7;
+  }
 }
 
 .app-form__input[name=card-view] {

@@ -511,6 +511,12 @@ template {
     background-image: url(../img/weeek-back.jpg); }
   .tool-item--smaple {
     background-image: url(../img/smaple-back.jpg); }
+  .tool-item:hover, .tool-item:focus {
+    -webkit-box-shadow: 0px 3px 36px rgba(0, 0, 0, 0.08);
+            box-shadow: 0px 3px 36px rgba(0, 0, 0, 0.08); }
+  .tool-item:active {
+    -webkit-box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.16);
+            box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.16); }
 
 .tool-item__icon {
   margin-right: 25px;
@@ -936,7 +942,7 @@ template {
     color: #68634F; }
 
 .app-form__input[name=logo-input] + .app-form__span {
-  border: 1px dashed #e8e8e8;
+  border: 2px dashed #e8e8e8;
   width: 410px;
   text-align: center;
   cursor: pointer;
@@ -946,6 +952,8 @@ template {
   padding: 20px;
   margin-left: -20px;
   border-radius: 8px; }
+  .app-form__input[name=logo-input] + .app-form__span:hover, .app-form__input[name=logo-input] + .app-form__span:focus {
+    border-color: #B7B7B7; }
 
 .app-form__input[name=card-view] {
   position: absolute;

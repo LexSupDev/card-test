@@ -16,6 +16,15 @@
   &--smaple {
     background-image: url(../img/smaple-back.jpg);
   }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 3px 36px rgba(0, 0, 0, 0.08);
+  }
+
+  &:active {
+    box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.16);
+  }
 }
 
 .tool-item__icon {
