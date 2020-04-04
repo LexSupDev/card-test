@@ -1,7 +1,6 @@
 .promo {
   text-align: center;
   padding-top: 20px;
-  margin-bottom: 40px;
   background: url(../img/promo-back.jpg) center bottom no-repeat;
   background-size: auto;
 }
@@ -26,6 +25,7 @@
 .promo__note {
   padding-top: 300px;
   font-size: $min-font-size;
+  padding-bottom: 20px;
 }
 
 .promo__problem {
@@ -44,5 +44,11 @@
     background-image: url(../img/promo-dots.svg);
     left: 50%;
     bottom: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .promo__desc {
+    width: 100%;
   }
 }

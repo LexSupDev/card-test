@@ -23,3 +23,9 @@
   color: $color-second;
   text-decoration: underline;
 }
+
+@media (max-width: 576px) {
+  .subscribe {
+    padding-top: 60px;
+  }
+}

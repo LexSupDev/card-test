@@ -4,10 +4,8 @@
   align-items: flex-start;
 }
 
-.page-form__form {
-  //width: 67%;
-}
-
-.page-form__validation {
-  //width: 29%;
+@media (max-width: 576px) {
+  .page-form__wrapper {
+    flex-direction: column;
+  }
 }

@@ -19,3 +19,8 @@
   font-weight: normal;
 }
 
+@media (max-width: 576px) {
+  .validation-check {
+    margin-top: 50px;
+  }
+}

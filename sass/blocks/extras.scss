@@ -11,6 +11,10 @@
   line-height: 38px;
   position: relative;
   margin-bottom: 24px;
+}
+
+.extras__title-decor {
+  position: relative;
 
   &:after {
     @include pseudo;
@@ -18,11 +22,17 @@
     height: 17px;
     background-image: url(../img/extras__title.png);
     top: -6px;
-    left: 540px;
+    left: 40px;
   }
 }
 
 .extras__list {
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 576px) {
+  .extras__list {
+    flex-direction: column;
+  }
 }

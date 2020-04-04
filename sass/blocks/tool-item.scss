@@ -8,7 +8,8 @@
   margin-right: 20px;
   padding-top: 25px;
   padding-left: 25px;
-  background: center 35% no-repeat;
+  background: #ffffff center 35% no-repeat;
+
   &--weeek {
     background-image: url(../img/weeek-back.jpg);
   }
@@ -63,3 +64,22 @@
     width: 315px;
   }
 }
+
+@media (max-width: 576px) {
+  .tool-item {
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-right: 0;
+    padding: 25px;
+
+    &--weeek {
+      background-position: center bottom;
+    }
+  }
+
+  .tool-item__desc {
+    font-size: 13px;
+    width: 100%;
+  }
+ }

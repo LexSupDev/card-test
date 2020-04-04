@@ -365,7 +365,6 @@ template {
 .promo {
   text-align: center;
   padding-top: 20px;
-  margin-bottom: 40px;
   background: url(../img/promo-back.jpg) center bottom no-repeat;
   background-size: auto; }
 
@@ -385,7 +384,8 @@ template {
 
 .promo__note {
   padding-top: 300px;
-  font-size: 13px; }
+  font-size: 13px;
+  padding-bottom: 20px; }
 
 .promo__problem {
   padding-bottom: 5px; }
@@ -403,6 +403,10 @@ template {
     background-image: url(../img/promo-dots.svg);
     left: 50%;
     bottom: 5px; }
+
+@media (max-width: 576px) {
+  .promo__desc {
+    width: 100%; } }
 
 .app {
   padding-top: 266px; }
@@ -467,6 +471,7 @@ template {
               box-shadow: none; }
 
 .tools {
+  padding-top: 40px;
   padding-bottom: 70px;
   background-color: #fbfbfb; }
 
@@ -490,6 +495,21 @@ template {
   display: -ms-flexbox;
   display: flex; }
 
+@media (max-width: 576px) {
+  .tools__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .tools__row {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
+
 .tool-item {
   width: 400px;
   display: -webkit-box;
@@ -506,7 +526,7 @@ template {
   margin-right: 20px;
   padding-top: 25px;
   padding-left: 25px;
-  background: center 35% no-repeat; }
+  background: #ffffff center 35% no-repeat; }
   .tool-item--weeek {
     background-image: url(../img/weeek-back.jpg); }
   .tool-item--smaple {
@@ -546,6 +566,22 @@ template {
   .tool-item__desc--small {
     width: 315px; }
 
+@media (max-width: 576px) {
+  .tool-item {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 20px;
+    margin-right: 0;
+    padding: 25px; }
+    .tool-item--weeek {
+      background-position: center bottom; }
+  .tool-item__desc {
+    font-size: 13px;
+    width: 100%; } }
+
 .subscribe {
   text-align: center;
   width: 225px;
@@ -569,6 +605,10 @@ template {
   color: #f5e07e;
   text-decoration: underline; }
 
+@media (max-width: 576px) {
+  .subscribe {
+    padding-top: 60px; } }
+
 .extras {
   padding-bottom: 40px;
   margin-bottom: 40px;
@@ -581,7 +621,10 @@ template {
   line-height: 38px;
   position: relative;
   margin-bottom: 24px; }
-  .extras__title:after {
+
+.extras__title-decor {
+  position: relative; }
+  .extras__title-decor:after {
     content: "";
     display: block;
     position: absolute;
@@ -589,7 +632,7 @@ template {
     height: 17px;
     background-image: url(../img/extras__title.png);
     top: -6px;
-    left: 540px; }
+    left: 40px; }
 
 .extras__list {
   display: -webkit-box;
@@ -598,6 +641,13 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+
+@media (max-width: 576px) {
+  .extras__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
 
 .extra-item {
   width: 33.3%;
@@ -642,6 +692,11 @@ template {
   margin-top: -60px;
   background-color: #fff; }
 
+@media (max-width: 576px) {
+  .extra-item {
+    width: 100%;
+    margin-bottom: 20px; } }
+
 .lk-promo {
   text-align: center; }
 
@@ -679,6 +734,10 @@ template {
           box-shadow: 0px 2px 8px #e8e8e8;
   font-family: "Manrope-Medium", Arial, sans-serif; }
 
+@media (max-width: 576px) {
+  .lk-promo__desc {
+    width: 100%; } }
+
 .page-footer {
   padding: 22px 0;
   color: #aaa; }
@@ -697,6 +756,19 @@ template {
 .page-footer__txt {
   font-family: "Manrope-Medium", Arial, sans-serif;
   font-size: 16px; }
+
+@media (max-width: 576px) {
+  .page-footer__txt {
+    text-align: center;
+    padding-bottom: 20px; }
+  .page-footer__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; } }
 
 .copyright__wrapper {
   display: -webkit-box;
@@ -799,6 +871,13 @@ template {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start; }
+
+@media (max-width: 576px) {
+  .page-form__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
 
 .app-form {
   display: -webkit-box;
@@ -1016,12 +1095,12 @@ template {
     position: absolute;
     width: 24px;
     height: 24px;
-    left: 8px;
-    top: 8px;
+    left: 7px;
+    top: 7px;
     border-radius: 4px; }
   .app-form__input[name=color] + .app-form__span:hover:after {
-    left: 7px;
-    top: 7px; }
+    left: 6px;
+    top: 6px; }
 
 .app-form__input[name=color] + .app-form__span--1:after {
   background-color: #EB4545; }
@@ -1160,8 +1239,8 @@ template {
           box-shadow: 0px 2px 16px rgba(232, 117, 40, 0.33); }
 
 .app-form__input[name=color]:checked + .app-form__span:after {
-  left: 7px;
-  top: 7px; }
+  left: 6px;
+  top: 6px; }
 
 .app-form__input[name=color]:checked + .app-form__span--1 {
   border: 2px solid #EB4545; }
@@ -1272,6 +1351,69 @@ input[type="number"]::-webkit-inner-spin-button {
   .app-form__button:last-child {
     margin-right: 0; }
 
+@media (max-width: 576px) {
+  .app-form {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .app-form__label {
+    width: 100%; }
+    .app-form__label--ip-form {
+      width: 50%; }
+    .app-form__label--card {
+      width: 50%;
+      margin-right: 0; }
+  .app-form__input-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .app-form__input-wrapper--ip-form {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    .app-form__input-wrapper--file {
+      margin-bottom: 100px; }
+    .app-form__input-wrapper--card-view {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      margin-bottom: 15px; }
+      .app-form__input-wrapper--card-view > .app-form__label {
+        width: 50%; }
+    .app-form__input-wrapper--colors {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: start; }
+      .app-form__input-wrapper--colors > .app-form__label {
+        width: 20%; }
+    .app-form__input-wrapper--buttons {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+  .app-form__input[name=ip-form] + .app-form__span-ipform {
+    width: 150px; }
+  .app-form__input[name=logo-input] + .app-form__span {
+    width: 100%; }
+  .app-form__button {
+    width: 100%;
+    margin-bottom: 20px; } }
+
 .validation-check {
   width: 360px;
   margin-top: 375px;
@@ -1289,6 +1431,10 @@ input[type="number"]::-webkit-inner-spin-button {
   padding-bottom: 6px;
   font-family: "Manrope-SemiBold", Arial, sans-serif;
   font-weight: normal; }
+
+@media (max-width: 576px) {
+  .validation-check {
+    margin-top: 50px; } }
 
 .check-list__item-title {
   font-family: "Manrope-Medium", Arial, sans-serif;
@@ -1357,7 +1503,9 @@ ul {
   margin: -1px; }
 
 .wrapper {
-  max-width: 1240px;
+  max-width: 1280px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0 auto; }
 
 /*# sourceMappingURL=style.css.map */
