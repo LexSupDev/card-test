@@ -378,10 +378,6 @@ template {
   line-height: 1.5;
   font-size: 20px; }
 
-.promo__desc-link {
-  color: #f5e07e;
-  text-decoration: underline; }
-
 .promo__note {
   padding-top: 300px;
   font-size: 13px;
@@ -603,7 +599,8 @@ template {
 
 .subscribe__link {
   color: #f5e07e;
-  text-decoration: underline; }
+  text-decoration: underline;
+  cursor: pointer; }
 
 @media (max-width: 576px) {
   .subscribe {
@@ -859,7 +856,8 @@ template {
   width: 14px;
   height: 14px;
   top: -18px;
-  right: -18px; }
+  right: -18px;
+  cursor: pointer; }
 
 .page-form__wrapper {
   display: -webkit-box;
